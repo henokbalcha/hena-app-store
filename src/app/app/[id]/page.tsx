@@ -37,7 +37,7 @@ export default async function AppDetailsPage({ params }: { params: Promise<{ id:
             <div className="container" style={{ maxWidth: '800px' }}>
 
                 {/* Header Section */}
-                <div style={{ display: 'flex', gap: '24px', marginBottom: '40px', alignItems: 'flex-start' }}>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '24px', marginBottom: '40px', alignItems: 'flex-start' }}>
                     {/* App Icon */}
                     <div style={{
                         width: '120px',
@@ -50,11 +50,11 @@ export default async function AppDetailsPage({ params }: { params: Promise<{ id:
                         flexShrink: 0
                     }}></div>
 
-                    <div style={{ flex: 1 }}>
+                    <div style={{ flex: 1, minWidth: '280px' }}>
                         <h1 className="text-gradient" style={{ fontSize: '2.5rem', fontWeight: 'bold', marginBottom: '8px', lineHeight: 1.2 }}>
                             {app.title}
                         </h1>
-                        <div style={{ display: 'flex', gap: '16px', color: 'var(--text-secondary)', marginBottom: '24px', alignItems: 'center' }}>
+                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', color: 'var(--text-secondary)', marginBottom: '24px', alignItems: 'center' }}>
                             <span style={{ background: 'var(--bg-tertiary)', padding: '4px 12px', borderRadius: 'var(--radius-full)', fontSize: '0.8rem' }}>
                                 {app.category}
                             </span>
@@ -99,7 +99,7 @@ export default async function AppDetailsPage({ params }: { params: Promise<{ id:
                 <div style={{ marginBottom: '60px' }}>
                     <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '20px' }}>Ratings & Reviews</h2>
 
-                    <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) 300px', gap: '40px' }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '40px' }}>
 
                         {/* Reviews List */}
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>

@@ -38,12 +38,12 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ s
         left: 0,
         right: 0,
         zIndex: 50,
-        padding: '16px 0'
+        padding: '12px 0'
       }}>
-        <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+        <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '12px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '32px' }}>
             <h1 className="text-gradient" style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>Hena Store</h1>
-            <div style={{ display: 'flex', gap: '24px', color: 'var(--text-secondary)' }}>
+            <div className="desktop-only" style={{ display: 'flex', gap: '24px', color: 'var(--text-secondary)' }}>
               <a href="/" style={{ color: 'var(--text-primary)' }}>Home</a>
               <a href="#">Apps</a>
               <a href="#">Games</a>
@@ -58,9 +58,9 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ s
             </div>
           </div>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '20px', flex: 1, justifyContent: 'flex-end', minWidth: '200px' }}>
             <SearchBar />
-            <div style={{ width: '36px', height: '36px', borderRadius: '50%', background: 'var(--bg-tertiary)' }}></div>
+            <div className="desktop-only" style={{ width: '36px', height: '36px', borderRadius: '50%', background: 'var(--bg-tertiary)' }}></div>
           </div>
         </div>
       </nav>
