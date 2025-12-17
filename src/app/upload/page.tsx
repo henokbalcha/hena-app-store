@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { supabase } from '@/lib/supabase';
+import { createSrvrClient } from '@/lib/supabase-server';
 import { useRouter } from 'next/navigation';
 
 export default function UploadPage() {
